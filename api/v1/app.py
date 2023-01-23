@@ -21,6 +21,15 @@ def tear_down(error):
     storage.close()
 
 
+@app.errorhandler(404)
+def error_404(message):
+    """Handles the 404 status code"""
+
+    response = jsonify({'error': 'Not found'})
+    response.status_code = 404
+    return response
+
+
 if __name__ == '__main__':
     app.run(
             host=getenv('HBNB_API_HOST', default='0.0.0.0'),
