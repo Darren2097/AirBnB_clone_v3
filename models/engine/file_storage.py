@@ -87,7 +87,7 @@ class FileStorage:
         """method to count the number of objects in storage"""
 
         if cls is None:
-            return len(models.storage.all()
+            return len(models.storage.all())
         elif cls in models.classes.keys():
             return len(models.storage.all(cls))
         else:
