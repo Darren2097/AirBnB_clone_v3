@@ -78,7 +78,7 @@ class FileStorage:
         obj_list = models.storage.all(cls).values()
 
         for obj in obj_list:
-            if obj_id == id:
+            if obj.id == id:
                 return obj
 
         return None
