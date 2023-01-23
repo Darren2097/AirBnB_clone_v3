@@ -21,6 +21,7 @@ def tear_down(error):
     storage.close()
 
 
+<<<<<<< HEAD
 @app.errorhandler(404)
 def error_404(message):
     """Handles the 404 status code"""
@@ -36,3 +37,8 @@ if __name__ == '__main__':
             port=getenv('HBNB_API_PORT', default=5000),
             threaded=True
             )
+=======
+if __name__ == '__main__':
+    app.run(host=getenv('HBNB_API_HOST', default='0.0.0.0'),
+            port=getenv('HBNB_API_PORT', default=5000), threaded=True)
+>>>>>>> storage_get_count

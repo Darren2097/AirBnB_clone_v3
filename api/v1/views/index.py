@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 """Routing Functions"""
 
+<<<<<<< HEAD
 from api.v1.views import app_views
+=======
+from api.v1.views import app.views
+>>>>>>> storage_get_count
 from flask import jsonify
 from models import storage
 
@@ -11,6 +15,7 @@ def show_status():
     """Shows the OK status"""
 
     return jsonify({'status': 'OK'})
+<<<<<<< HEAD
 
 
 @app_views.route('/stats', methods=['GET'], strict_slashes=False)
@@ -27,3 +32,5 @@ def get_stats():
             }
 
     return jsonify(stats_dict)
+=======
+>>>>>>> storage_get_count
